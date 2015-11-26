@@ -1,0 +1,52 @@
+.top {
+	background: $top-background-color;
+	height: 97vh;
+	padding: 15px;
+
+	@include media($on-laptop) {
+		.top-content {
+			max-width: 700px;
+			padding: 20vh 0 0 15%;
+		}
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	a {
+		font-weight: bold;
+	}
+
+	.social {
+		padding: 20px 0;
+		
+		@include media($on-laptop) {
+			padding: 40px 0;
+		}
+
+		ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		}
+
+		li {
+			display: inline;
+		}
+
+		a {
+			float: left;
+			display: block;
+			width: 40px;
+			text-align: center;
+			padding-bottom: 3px;
+			color: $base-font-color;
+
+			&:hover {
+				border-bottom: 3px solid #000;
+			}
+		}
+	}
+
+}

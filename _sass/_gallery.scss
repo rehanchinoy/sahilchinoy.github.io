@@ -1,0 +1,53 @@
+.gallery {
+	margin: 50px auto;
+	font-size: $small-font-size;
+
+	.gallery-item {
+		@include span-columns(12);
+
+		margin-bottom: 30px;
+
+		@include media($on-laptop) {
+			@include span-columns(6);
+			@include omega();
+			margin-bottom: 50px;
+		}
+
+		.container {
+			@include filter(grayscale(100%));
+
+			@include media($on-laptop) {
+				max-width: 380px;
+			}
+
+			@include media($on-desktop) {
+				max-width: 480px;
+			}
+
+			height: 480px;
+			margin: 0 auto;
+			background: $light-gray;
+			padding: 20px;
+			text-align: center;
+
+			&:hover {
+				@include filter(none);
+				outline: 1px solid $dark-gray;
+			}
+		}
+
+		.post-meta {
+			color: $base-font-color;
+			text-align: center;
+		}
+
+		img {
+			width: 400px;
+			margin: 20px auto;
+		}
+
+		p {
+			text-align: left;
+		}
+	}
+}
