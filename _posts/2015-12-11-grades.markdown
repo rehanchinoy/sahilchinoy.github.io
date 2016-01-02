@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "UC Berkeley grades"
+date:   2015-12-11 18:22:11 -0800
+type: The Daily Californian
+image: grades.png
+link: http://projects.dailycal.org/grades/
+---
+We built a [tool](https://github.com/dailycal-projects/grades) to parse more than 1.5 million grades given at UC Berkeley over the last eight years. Then, we created a website that asked readers to guess which department had the lowest grade average and visualized the true ranking with an interactive graphic.
