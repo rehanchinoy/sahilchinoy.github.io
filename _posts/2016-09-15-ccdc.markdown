@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Bulk data download site"
+date:   2016-09-15 18:22:11 -0800
+type: CA Civic Data Coalition
+image: ccdc.png
+link: http://www.californiacivicdata.org/
+---
+I helped build a website for the California Civic Data Coalition's open-source archive of California campaign finance and lobbying data. We're working on untangling the state's messy, undocumented CAL-ACCESS database for journalists and researchers.
