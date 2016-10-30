@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Archive"
+date:   2016-10-22 18:22:11 -0800
+type: The Daily Californian
+image: archive.png
+link: http://newsprint.dailycal.org/
+---
+I built a website and image processing pipeline for the Daily Californian's microfilm digitization project. I'm developing the [open-source tool](https://github.com/dailycal-projects/archive) backing the project, aiming to crowdsource transcriptions to assemble a searchable archive of city and university history.
