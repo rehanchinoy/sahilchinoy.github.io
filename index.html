@@ -8,7 +8,7 @@ layout: default
 
     <p>Hello! I'm an undergrad studying physics and economics at UC Berkeley.</p>
 
-    <p>I'm interested in data stories, news apps and interactive graphics. At school, I work for <a href="http://www.dailycal.org/author/schinoy/">The Daily Californian</a>. This summer, I'll be an intern at the <a href="http://postgraphics.tumblr.com/">Washington Post</a>. I was previously an intern at the <a href="http://www.latimes.com/local/datadesk/">Los Angeles Times</a>.</p>
+    <p>I'm interested in data journalism, interactive graphics and applied microeconomics. At school, I work for <a href="http://www.dailycal.org/author/schinoy/">The Daily Californian</a>. This summer, I'll be an intern at the <a href="http://postgraphics.tumblr.com/">Washington Post</a>. I was previously an intern at the <a href="http://www.latimes.com/local/datadesk/">Los Angeles Times</a>.</p>
 
     <div class="social">
       <li>
@@ -22,8 +22,8 @@ layout: default
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/sahilchinoy" target="_blank">
-        <i class="fa fa-linkedin"></i>
+        <a href="/assets/resume.pdf" target="_blank">
+        <i class="fa fa-file-text"></i>
       </a>
       </li>
       <li>
@@ -35,7 +35,7 @@ layout: default
 
     <br />
 
-    <div><strong>Scroll down</strong> to see what I've been working on.</div>
+    <div><span class="scrolldown">Scroll down</span> to see what I've been working on.</div>
   </div>
 </div>
 
@@ -45,7 +45,7 @@ layout: default
       <section class="gallery-item">
         <div class="container">
           <a href="{{ post.link }}">
-            <p class="post-meta"><b>{{ post.title }}</b> &middot; {{ post.type }} &middot; {{ post.date | date: "%B %Y" }}</p>
+            <p class="post-meta"><span class="post-title">{{ post.title }}</span> &middot; {{ post.type }} &middot; {{ post.date | date: "%B %Y" }}</p>
             <img src="/assets/{{ post.image }}">
           </a>
           {{ post.content }}

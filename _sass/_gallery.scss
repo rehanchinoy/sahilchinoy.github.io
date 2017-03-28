@@ -12,6 +12,7 @@
 			@include omega();
 			margin-bottom: 50px;
 		}
+		
 
 		.container {
 			@include filter(grayscale(100%));
@@ -29,15 +30,20 @@
 			background: $light-gray;
 			padding: 20px;
 			text-align: center;
+			outline: 1px solid $dark-gray;
 
 			&:hover {
 				@include filter(none);
-				outline: 1px solid $dark-gray;
+				outline: 1px solid $crimson;
 			}
 		}
 
+		.post-title {
+			font-weight: bold;
+		}
+
 		.post-meta {
-			color: $base-font-color;
+			color: $crimson;
 			text-align: center;
 		}
 
@@ -46,6 +52,10 @@
 			max-width: 400px;
 			margin: 20px auto;
 
+		}
+
+		a {
+			font-weight: bold;
 		}
 
 		p {

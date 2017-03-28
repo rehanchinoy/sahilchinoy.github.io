@@ -1,5 +1,5 @@
 .top {
-	background: $top-background-color;
+	background: $base-background-color;
 	height: 97vh;
 	padding: 15px;
 
@@ -12,10 +12,16 @@
 
 	h1 {
 		font-size: 2em;
+		color: $crimson;
 	}
 
 	a {
 		font-weight: bold;
+	}
+
+	.scrolldown {
+		font-weight: bold;
+		color: $crimson;
 	}
 
 	.social {
@@ -44,7 +50,7 @@
 			color: $base-font-color;
 
 			&:hover {
-				border-bottom: 3px solid #000;
+				color: $indigo;
 			}
 		}
 	}
