@@ -16,11 +16,26 @@
 		margin-bottom: 5rem;
 
 		h2 {
-			font-size: 1.2rem;
+			font-size: 1em;
+
+			@include media($on-laptop) {
+				font-size: 1.2em;
+			}
 		}
 
 		h3 {
-			font-size: 1rem;
+			font-size: 0.8em;
+
+			@include media($on-laptop) {
+				font-size: 1em;
+			}
+		}
+
+		p {
+			font-size: 0.9em;
+			@include media($on-laptop) {
+				font-size: 1.1em;
+			}
 		}
 
 		img {
