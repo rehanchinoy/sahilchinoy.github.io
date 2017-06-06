@@ -1,65 +1,46 @@
 .gallery {
-	margin: 50px auto;
-	font-size: $small-font-size;
+	position: absolute;
+	top: 100vh;
+
+	margin-top: 10vh;
+	padding: 15px;
+
+	@include media($on-laptop) {
+		padding: 0 15%;
+	}
 
 	.gallery-item {
+
 		@include span-columns(12);
 
-		margin-bottom: 30px;
+		margin-bottom: 5rem;
 
-		@include media($on-laptop) {
-			@include span-columns(6);
-			@include omega();
-			margin-bottom: 50px;
-		}
-		
-
-		.container {
-			@include filter(grayscale(100%));
-
-			@include media($on-laptop) {
-				max-width: 380px;
-			}
-
-			@include media($on-desktop) {
-				max-width: 480px;
-			}
-
-			height: 500px;
-			margin: 0 auto;
-			background: $light-gray;
-			padding: 20px;
-			text-align: center;
-			outline: 1px solid $dark-gray;
-
-			&:hover {
-				@include filter(none);
-				outline: 1px solid $crimson;
-			}
+		h2 {
+			font-size: 1.2rem;
 		}
 
-		.post-title {
-			font-weight: bold;
-		}
-
-		.post-meta {
-			color: $crimson;
-			text-align: center;
+		h3 {
+			font-size: 1rem;
 		}
 
 		img {
 			width: 100%;
-			max-width: 400px;
-			margin: 20px auto;
-
 		}
 
-		a {
-			font-weight: bold;
+		@include media($on-laptop) {
+			img {
+				max-width: 400px;
+			}
+			.text-wrapper {
+				@include span-columns(6);
+			}
+
+			.image-wrapper {
+				@include shift(1);
+				@include span-columns(5);
+			}
 		}
 
-		p {
-			text-align: left;
-		}
+		
 	}
 }

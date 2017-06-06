@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-
+<div class="background"></div>
+<span class="credit">Background inspired by Bridget Riley &middot; <a onclick="drawBars()" style="cursor: pointer">Refresh</a></span>
 <div class="top">
   <div class="top-content">
     <h1>Sahil Chinoy</h1>
 
-    <p>Hello! I'm an undergrad studying physics and economics at UC Berkeley.</p>
+    <p>Hello! I'm an undergrad studying physics and economics at UC Berkeley. I'm currently a graphics intern at <em><a href="http://postgraphics.tumblr.com/">The Washington Post</a></em>.</p>
 
-    <p>I'm interested in data journalism, interactive graphics and applied microeconomics. At school, I work for <a href="http://www.dailycal.org/author/schinoy/">The Daily Californian</a>. This summer, I'll be an intern at the <a href="http://postgraphics.tumblr.com/">Washington Post</a>. I was previously an intern at the <a href="http://www.latimes.com/local/datadesk/">Los Angeles Times</a>.</p>
-
+    <p>I'm interested in data journalism, interactive graphics and empirical social science. At school, I work for <em><a href="http://www.dailycal.org/author/schinoy/">The Daily Californian</a></em>. I was previously an intern at <em><a href="http://www.latimes.com/local/datadesk/">The Los Angeles Times</a></em>.</p>
+    
     <div class="social">
       <li>
         <a href="mailto:sahil.chinoy@gmail.com">
@@ -33,24 +34,70 @@ layout: default
       </li>
     </div>
 
-    <br />
+    <br>
 
-    <div><span class="scrolldown">Scroll down</span> to see what I've been working on.</div>
+    <p>Scroll down to see what I've been working on.</p>
+
   </div>
+
 </div>
+
 
 <div class="gallery">
 
-    {% for post in site.posts %}
-      <section class="gallery-item">
-        <div class="container">
-          <a href="{{ post.link }}">
-            <p class="post-meta"><span class="post-title">{{ post.title }}</span> &middot; {{ post.type }} &middot; {{ post.date | date: "%B %Y" }}</p>
-            <img src="/assets/{{ post.image }}">
-          </a>
-          {{ post.content }}
+  {% for post in site.posts %}
+  <section class="gallery-item">
+        <div class="text-wrapper">
+          <h2 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+          <h3>{{ post.type }} &middot; {{ post.date | date: "%B %Y" }}</h3>
+          <p>{{ post.content }}</p>
         </div>
-      </section>
-    {% endfor %}
+        <div class="image-wrapper">
+          <a href="{{ post.link }}"><img src="/assets/{{ post.image }}"></a>
+        </div>
+  </section>
+  {% endfor %}
 
 </div>
+
+<script type="text/javascript">
+var drawBars = function() {
+  // Clear previous
+  d3.select(".background").select("svg").remove();
+
+  var width = $('.background').width();
+  var height = $('.background').height();
+
+  // Set number of bars based on width
+  if (width > 700) {
+    var numBars = 20;
+  } else {
+    var numBars = 10
+  }
+
+  var svg = d3.select(".background").append("svg")
+    .attr('width', width)
+    .attr('height', height);
+
+  var colors = [];
+  for (i = 0; i < numBars; i++) { 
+      colors.push(randomColor({ luminosity: 'light' }))
+  }
+
+  var barWidth = width / numBars;
+
+  var bar = svg.selectAll("g")
+    .data(colors)
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(" + i * barWidth + ", 0)"; });
+
+  bar.append("rect")
+    .attr("width", barWidth)
+    .attr("height", height)
+    .attr("fill", function(d) { return d; });
+}
+
+drawBars();
+$(window).resize(drawBars);
+
+</script>

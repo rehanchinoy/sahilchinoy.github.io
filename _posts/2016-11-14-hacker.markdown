@@ -6,4 +6,4 @@ type: The Daily Californian
 image: hacker.png
 link: http://projects.dailycal.org/cs-gender/
 ---
-We investigated gender disparities in the UC Berkeley's computer science program. I analyzed campus data, designed the web layout and built an [interactive graphic](http://projects.dailycal.org/cs-gender/graphic/) to visualize what a large lecture hall might look like if everyone sitting down studied, say, English.
+We investigated gender disparities in the UC Berkeley's computer science program. I analyzed campus data, designed the web layout and built an [interactive graphic](http://projects.dailycal.org/cs-gender/graphic/) to visualize what a large lecture hall might look like if everyone sitting down studied, say, English. In March 2017, we won the “Best Interactive Graphic” award from the California College Media Association.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Professor pay-checker"
+title:  "Professor Pay-checker"
 date:   2016-09-20 18:22:11 -0800
 type: The Daily Californian
 image: paychecker.png

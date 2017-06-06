@@ -1,6 +1,6 @@
 // Typography
-$base-font-family: 'Ek Mukta', sans-serif;
-$heading-font-family: 'Average', serif;
+$base-font-family: 'Sorts Mill Goudy', serif;
+$heading-font-family: sans-serif;
 
 // Font Sizes
 $base-font-size: 1.1em;
@@ -18,23 +18,26 @@ $base-z-index: 0;
 
 // Colors
 $blue: #1580CF;
+$dark-blue: #000080;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #fafafa;
 $yellow: #FFFFE0;
 $crimson: #8B0000;
 $indigo: #4B0082;
+$purple: #ffccff;
+$mint-green: #ccffcc;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $indigo;
+$action-color: $dark-blue;
 
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$top-background-color: $yellow;
+$top-background-color: #fff;
 $base-background-color: #fff;
 $secondary-background-color: tint($base-border-color, 75%);
 

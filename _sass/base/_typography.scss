@@ -18,13 +18,14 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+
 p {
   margin: 0 0 $small-spacing;
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
+  color: $base-font-color;
+  text-decoration: underline;
   transition: color $base-duration $base-timing;
 
   &:active,
