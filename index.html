@@ -98,6 +98,15 @@ var drawBars = function() {
 }
 
 drawBars();
-$(window).resize(drawBars);
+
+// Cache the window width to prevent false resize events on mobile
+var windowWidth = $(window).width();
+$(window).resize(function() {
+  newWidth = $(window).width();
+  if (newWidth != windowWidth) {
+    windowWidth = newWidth;
+    drawBars();
+  }
+});
 
 </script>
